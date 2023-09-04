@@ -1,0 +1,16 @@
+﻿@page
+@model Exercises.Pages.Index1Model
+@{
+    int randomNumber = new Random().Next(1, 7); //GENERATES NUMBER BETWEEN 1 and 6
+    int winningNumber = 3;
+    string resultsmessage = "";
+    if (winningNumber == randomNumber)
+    { resultsmessage = "You won Jessie!"; }
+    else
+    { resultsmessage = "Please try again Jessie"; }
+}
+
+<h1>Local Lottery</h1>
+<p>Your winning number is @winningNumber</p>
+<p>Today's lottery number is @randomNumber'</p>
+<p>@resultsmessage</p>
