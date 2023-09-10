@@ -1,7 +1,12 @@
+﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
+using RecruitCatBeyrerJL.Data;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorPages();
+builder.Services.AddDbContext<RecruitCatBeyrerJLContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("RecruitCatBeyrerJLContext") ?? throw new InvalidOperationException("Connection string 'RecruitCatBeyrerJLContext' not found.")));
 
 var app = builder.Build();
 
