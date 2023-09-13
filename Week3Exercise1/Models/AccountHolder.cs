@@ -10,5 +10,8 @@
         public string Email { get; set; }
         public List<BankAccount>? BankAccounts { get; set; }
 
+
+
+
     }
 }
