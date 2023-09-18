@@ -1,0 +1,66 @@
+﻿@page
+@model Week3Exercise1.Pages.BankAccounts.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>List of Bank Accounts</h1>
+
+<p>
+    <a asp-page="Create">Create New Account</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.BankAccount[0].AccountNumber)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BankAccount[0].CurrentBalance)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BankAccount[0].AccountName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BankAccount[0].AccountHolder)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BankAccount[0].PriorBalance)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BankAccount[0].AccountType)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.BankAccount) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.AccountNumber)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CurrentBalance)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AccountName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AccountHolderId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PriorBalance)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AccountType)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

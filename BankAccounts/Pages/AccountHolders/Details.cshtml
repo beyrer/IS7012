@@ -1,0 +1,67 @@
+﻿@page
+@model BankAccounts.Pages.AccountHolders.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Account Holder Details</h1>
+
+<div>
+    <h4>Account Holder</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.AccountHolder.FirstName)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.AccountHolder.FirstName)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.AccountHolder.LastName)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.AccountHolder.LastName)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.AccountHolder.DateOfBirth)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.AccountHolder.DateOfBirth)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.AccountHolder.Address)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.AccountHolder.Address)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.AccountHolder.City)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.AccountHolder.City)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.AccountHolder.State)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.AccountHolder.State)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.AccountHolder.Zip)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.AccountHolder.Zip)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.AccountHolder.Email)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.AccountHolder.Email)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.AccountHolder?.Id">Edit</a> |
+    <a asp-page="./Index">Back to List</a>
+</div>

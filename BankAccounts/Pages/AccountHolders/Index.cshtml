@@ -1,0 +1,78 @@
+﻿@page
+@model BankAccounts.Pages.AccountHolders.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>List of Account Holders</h1>
+
+<p>
+    <a asp-page="Create">Create New Account Holder</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.AccountHolder[0].FirstName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AccountHolder[0].LastName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AccountHolder[0].DateOfBirth)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AccountHolder[0].Address)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AccountHolder[0].City)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AccountHolder[0].State)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AccountHolder[0].Zip)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AccountHolder[0].Email)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.AccountHolder) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.FirstName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LastName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DateOfBirth)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Address)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.City)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.State)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Zip)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Email)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

@@ -15,5 +15,7 @@ namespace Week3Exercise1.Data
         }
 
         public DbSet<Week3Exercise1.Models.AccountHolder> AccountHolder { get; set; } = default!;
+
+        public DbSet<Week3Exercise1.Models.BankAccount>? BankAccount { get; set; }
     }
 }
