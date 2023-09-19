@@ -28,7 +28,9 @@ namespace RecruitCatBeyrerJL02.Pages.Companies
                 return NotFound();
             }
 
-            var company = await _context.Company.FirstOrDefaultAsync(m => m.Id == id);
+            var company = await _context.Company
+                .Include(x => x.Candidates)
+                .FirstOrDefaultAsync(m => m.Id == id);
             if (company == null)
             {
                 return NotFound();

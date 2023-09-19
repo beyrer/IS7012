@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using RecruitCatBeyrerJL02.Data;
 
@@ -11,9 +12,10 @@ using RecruitCatBeyrerJL02.Data;
 namespace RecruitCatBeyrerJL02.Migrations
 {
     [DbContext(typeof(RecruitCatBeyrerJL02Context))]
-    partial class RecruitCatBeyrerJL02ContextModelSnapshot : ModelSnapshot
+    [Migration("20230919031153_Assignment4update")]
+    partial class Assignment4update
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

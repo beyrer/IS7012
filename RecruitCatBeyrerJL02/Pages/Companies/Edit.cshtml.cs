@@ -36,7 +36,7 @@ namespace RecruitCatBeyrerJL02.Pages.Companies
                 return NotFound();
             }
             Company = company;
-           ViewData["IndustryId"] = new SelectList(_context.Set<Industry>(), "Id", "Id");
+           ViewData["IndustryId"] = new SelectList(_context.Set<Industry>(), "Id", "IndustryName");
             return Page();
         }
 
