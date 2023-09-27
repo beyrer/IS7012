@@ -48,7 +48,7 @@ namespace BearcatSportsBuyback.Models
         public int Phone { get; set; }
 
         [DisplayName("Favorite Sport")]
-        public Sport Sport { get; set; }
+        public Sport? Sport { get; set; }
 
         public int? SportId { get; set; }
 
