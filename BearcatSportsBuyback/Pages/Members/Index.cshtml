@@ -1,0 +1,96 @@
+﻿@page
+@model BearcatSportsBuyback.Pages.Members.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Member[0].FirstName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Member[0].LastName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Member[0].StreetAddress)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Member[0].City)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Member[0].State)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Member[0].Zip)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Member[0].Email)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Member[0].Phone)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Member[0].Sport)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Member[0].LeagueInterest)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Member[0].LeagueName)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Member) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.FirstName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LastName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.StreetAddress)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.City)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.State)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Zip)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Email)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Phone)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Sport.SportName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LeagueInterest)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LeagueName.LeagueName)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
