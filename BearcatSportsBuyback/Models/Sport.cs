@@ -12,13 +12,13 @@ namespace BearcatSportsBuyback.Models
         [Required(ErrorMessage = "A Sport Name is Required")]
         public string? SportName { get; set; }
 
-        public List<Member> Members { get; set; }
+        public List<Member>? Members { get; set; }
 
 
-        public List<League> Leagues { get; set; }
+        public List<League>? Leagues { get; set; }
 
 
-        public List<SportingGood> SportingGoods { get; set; }
+        public List<SportingGood>? SportingGoods { get; set; }
 
     }
 }

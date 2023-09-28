@@ -44,8 +44,8 @@ namespace BearcatSportsBuyback.Models
 
         [DisplayName("Phone Number")]
         [Phone]
-        [Required(ErrorMessage = "A Phone Number is Required")]
-        public int Phone { get; set; }
+        //[Required(ErrorMessage = "A Phone Number is Required")]
+        public int? Phone { get; set; }
 
         [DisplayName("Favorite Sport")]
         public Sport? Sport { get; set; }

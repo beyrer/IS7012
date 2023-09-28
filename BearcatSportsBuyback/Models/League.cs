@@ -17,10 +17,10 @@ namespace BearcatSportsBuyback.Models
 
         public Sport? Sport { get; set; }
 
-        public int SportId { get; set; }
+        public int? SportId { get; set; }
 
         [DisplayName("League Members")]
-        public List<Member> Members { get; set; }
+        public List<Member>? Members { get; set; }
 
         //comment out
     }
