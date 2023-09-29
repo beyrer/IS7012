@@ -1,0 +1,67 @@
+﻿@page
+@model BearcatSportsBuyback.Pages.Members.SearchModel
+
+@{
+    ViewData["Title"] = "Search";
+}
+
+<h1>Search Members</h1>
+
+<div>
+    <div>
+        <form action="" method="get" class="form-inline">
+            <input asp-for="Query" class="form-control mr-sm-2 mb-2" placeholder="Search Last Name..." />
+            <button type="submit" class="btn btn-primary mb-2">Search</button>
+        </form>
+    </div>
+</div>
+
+@if (Model.SearchCompleted)
+{
+    if (Model.Member.Any())
+    {
+        <div>
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Member[0].FirstName)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Member[0].LastName)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Member[0].LeagueInterest)
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model.Member)
+                    {
+                        <tr>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.FirstName)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.LastName)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.LeagueInterest)
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    }
+    else
+    {
+        <div>
+            <div>
+                <div>
+                    No Results match your term <strong>@Model.Query</strong>
+                </div>
+            </div>
+        </div>
+    }
+}
