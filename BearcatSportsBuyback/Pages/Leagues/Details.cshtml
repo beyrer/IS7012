@@ -5,7 +5,8 @@
     ViewData["Title"] = "Details";
 }
 
-<h1>League Details</h1>
+<div style="padding-top: 56px">
+<h1 class="fw-bolder text-white text-center" style="background-image: url(https://www.color-meanings.com/wp-content/uploads/Red-and-black-stripe-pattern.jpeg); background-size:100% 100%">League Details</h1>
 
 <div>
     <h4>League</h4>
@@ -26,6 +27,7 @@
     </dl>
 </div>
 <div>
-    <a asp-page="./Edit" asp-route-id="@Model.League?.Id">Edit</a> |
-    <a asp-page="./Index">Back to List</a>
+    <a class="btn btn-secondary" asp-page="./Edit" asp-route-id="@Model.League?.Id">Edit</a> |
+    <a class="btn btn-secondary" asp-page="./Index">Back to List</a>
+</div>
 </div>

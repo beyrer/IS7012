@@ -5,13 +5,14 @@
     ViewData["Title"] = "Index";
 }
 
-<h1>League List</h1>
+<div style="padding-top: 56px">
+<h1 class="fw-bolder text-white text-center" style="background-image: url(https://www.color-meanings.com/wp-content/uploads/Red-and-black-stripe-pattern.jpeg); background-size:100% 100%">League List</h1>
 
 <p>
-    <a asp-page="Create">Create New League</a>
+    <a class="btn btn-primary btn-md px-4 me-sm-3" asp-page="Create">Create New League</a>
 </p>
-<table class="table">
-    <thead>
+<table class="table table-hover align-middle mb-0 bg-white">
+    <thead class="bg-light">
         <tr>
             <th>
                 @Html.DisplayNameFor(model => model.League[0].LeagueName)
@@ -40,3 +41,4 @@
 }
     </tbody>
 </table>
+</div>
