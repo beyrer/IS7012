@@ -1,0 +1,23 @@
+﻿@page
+@model BearcatSportsBuyback.Pages.SportingGoods.StatisticsModel
+
+@{
+    ViewData["Title"] = "Statistics";
+}
+
+<h1>Statistics</h1>
+
+<ul class="list-group">
+    <li class="list-group-item d-flex justify-content-between align-items-center">
+        Total number of items in Sporting Goods
+        <span style="color:black" class="badge badge-primary badge-pill">@Model.TotalQuantity</span>
+    </li>
+    <li class="list-group-item d-flex justify-content-between align-items-center">
+        Average Quanity
+        <span style="color:black" class="badge badge-primary badge-pill">@Model.AverageQuantity</span>
+    </li>
+    <li class="list-group-item d-flex justify-content-between align-items-center">
+        Sum of all Quanities
+        <span style="color:black" class="badge badge-primary badge-pill">@Model.TQuantity</span>
+    </li>
+ </ul>
